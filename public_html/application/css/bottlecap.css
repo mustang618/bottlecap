@@ -1,0 +1,241 @@
+/* style sheet */
+
+/* for testing*/
+/*div {outline: 1px dotted blue;}*/
+
+div#div_header
+{
+  background-color: <?=$background_header?>;
+  border-bottom: 1px solid <?=$color_text1?>;
+  padding: 0 16px 0 16px;
+}
+
+div#div_header *
+{
+  vertical-align: bottom;
+}
+
+div#div_header span#span_title
+{
+  font-family: "Audiowide";
+  font-weight: normal;
+  font-size: 32pt;
+}
+
+div#div_header a#a_logoandtitle
+{
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+div#div_header a#a_logoandtitle:hover
+{
+  color: <?=$color_links?>; /* bootstrap color */
+}
+
+div#div_header span#span_menuandform
+{
+  white-space: nowrap;
+}
+
+div#div_header span#span_menu a
+{
+  border: 1px solid <?=$color_text1?>;
+  border-bottom: none;
+  padding: 0 16px 0 16px;
+  font-family: "Audiowide";
+  font-weight: normal;
+  font-size: 10pt;
+  position: relative; top: 1px;
+  text-decoration: none;
+}
+
+div#div_header span#span_menu a:hover
+{
+  color: <?=$color_text1?>;
+}
+
+div#div_header span#span_menu a:first-child
+{
+  margin-left: 16px;
+}
+
+div#div_header form#form_search
+{
+  display: inline-block;
+  margin-left: 16px;
+}
+
+div#div_middle
+{
+  padding: 0 16px 0 16px;
+  margin-top: 12px; /* not 16px as table rows have padding-top: 4px; */
+  margin-bottom: 16px;
+}
+
+div#div_middle div#div_search
+{
+  margin-top: 4px; /* 12px + 4px = 16px */
+  margin-bottom: 12px; /* not 16px as table rows have padding-bottom: 4px; */
+  color: <?=$color_text1?>;
+}
+
+div#div_middle div#div_search span#span_search
+{
+  /*font-family: "Audiowide";
+  font-weight: normal;
+  font-size: 12pt;*/
+}
+
+div#div_middle div#div_listings
+{
+  margin-bottom: 12px; /* not 16px as table rows have padding-bottom: 4px; */
+}
+
+div#div_middle table#table_listings
+{
+  width:100%;
+}
+
+div#div_middle table#table_listings td
+{
+  padding: 4px 0 4px 0;
+  border-bottom: 1px dotted <?=$color_separator?>;
+  height: 64px;
+}
+
+div#div_middle table#table_listings td:first-child
+{
+  padding-right: 16px;
+  color: <?=$color_text3?>;
+}
+
+div#div_middle table#table_listings td:last-child
+{
+  padding-left: 16px;
+}
+
+div#div_middle table#table_listings img /* thumbnails */
+{
+  width: 64px;
+}
+
+div#div_middle table#table_listings .listing_domain
+{
+  font-size: 10pt;
+  color: <?=$color_text3?>;
+}
+
+div#div_middle div#div_pagination
+{
+  /*font-family: "Audiowide";
+  font-weight: normal;
+  font-size: 12pt;*/
+  color: <?=$color_text1?>;
+  white-space: nowrap;
+}
+
+div#div_middle div#div_pagination a
+{
+  border: 1px solid <?=$color_text1?>;
+  padding: 0 16px 0 16px;
+  font-family: "Audiowide";
+  font-weight: normal;
+  font-size: 10pt;
+  text-decoration: none;
+  background-color: <?=$background_header?>;
+}
+
+div#div_middle div#div_pagination a:hover
+{
+  color: <?=$color_text1?>;
+}
+
+div#div_footer
+{
+  border-top: 1px solid <?=$color_text1?>;
+  padding: 0 16px 0 16px;
+  font-family: "Audiowide";
+  font-weight: normal;
+  font-size: 10pt;
+}
+
+div#div_pnf
+{
+  margin: 16px;
+}
+
+div#div_pnf table#table_pnf span
+{
+  ccolor: <?=$color_text1?>;
+  color: <?=$color_links?>;
+}
+
+div#div_pnf table#table_pnf span#span_pnf
+{
+  font-family: "Audiowide";
+  font-weight: normal;
+  font-size: 24pt;
+  color: <?=$color_text1?>;
+}
+
+div#div_pnf table#table_pnf td:first-child
+{
+  padding-right: 16px;
+}
+
+div#div_pnf table#table_edison
+{
+  width: 100%;
+  text-align: right;
+}
+
+div#div_pnf table#table_edison td
+{
+  text-align: right;
+  vertical-align: bottom;
+  color: <?=$color_text2?>;
+  font-weight: bold;
+}
+
+div#div_pnf table#table_edison td:last-child
+{
+  width: 196px; /* = 196px + 16px */
+  padding-left: 16px;
+}
+
+div#div_pnf table#table_edison img
+{
+  width: 196px;
+}
+
+/* modification to css as to be responsive for small devices */
+@media only screen and (max-width: 767px)
+{
+
+  /*div#div_header span#span_menu
+  {
+    position: relative; top: 2px;
+  }*/
+
+  div#div_header span#span_menu a:first-child
+  {
+    margin-left: 8px;
+  }
+
+  div#div_header form#form_search
+  {
+    margin-left: 8px;
+    color: <?=$color_text3?>;
+  }
+
+  div#div_header form#form_search input#q
+  {
+    width: 50%
+  }
+
+  div#div_pnf table#table_pnf span#span_pnf
+  {
+    font-size: 16pt;
+  }
+}
